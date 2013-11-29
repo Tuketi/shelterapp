@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.ui-input-search{
+	width:50% !important;
+	float:right !important;
+}
+.ui-header{
+	overflow:hidden !important;
+}
+.news_header{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.news_body{
+	font-size:80%;
+}
+.news_date{
+	float:right;
+}
+.news_footer{
+	text-align:center;
+	padding:5px;
+	font-weight:normal;
+	font-size:80%;
+}

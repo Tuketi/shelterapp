@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shelter Search</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<link rel="stylesheet" href="./css/main.css" />
+	<script src="./js/get_animals.js"></script>
+</head>
+<body>
+
+<!-- Home page -->
+<div data-role='page' id='home'>
+
+	<div data-role='content'>
+		<img src='./images/logo.png' alt='logo' style='margin-bottom:20px;width:100%;'>
+		
+		<div id='news_place'></div>
+		
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-id="footerid">
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="#footer_dogs" data-transition="slide" onclick='showAnimals(1)'><img src='./images/icon_dog.png' alt='dogs icon'><br />Dogs</a></li>
+				<li><a href="#footer_cats" data-transition="slide" onclick='showAnimals(2)'><img src='./images/icon_cat.png' alt='cats icon'><br />Cats</a></li>
+				<li><a href="#footer_other" data-transition="slide" onclick='showAnimals(3)'><img src='./images/icon_rabbit.png' alt='other icon'><br />Other</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- Dogs page -->
+<div data-role='page' id='footer_dogs'>
+
+	<div data-role='header'>
+		<a href='#home' data-icon='home'>Home</a>
+		<input type="search" name="searchbar" placeholder='search for breed' data-mini="true" autocomplete='off' onkeyup='showAnimals(1, this.value)'>
+	</div>
+
+	<div data-role='content' id='list_area_dog'></div>
+
+	<div data-role="footer" data-position="fixed" data-id="footerid">
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="#footer_dogs" data-transition="slide" onclick='showAnimals(1)'><img src='./images/icon_dog.png' alt='dogs icon'><br />Dogs</a></li>
+				<li><a href="#footer_cats" data-transition="slide" onclick='showAnimals(2)'><img src='./images/icon_cat.png' alt='cats icon'><br />Cats</a></li>
+				<li><a href="#footer_other" data-transition="slide" onclick='showAnimals(3)'><img src='./images/icon_rabbit.png' alt='other icon'><br />Other</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- Cats page -->
+<div data-role='page' id='footer_cats'>
+
+	<div data-role='header'>
+		<a href='#home' data-icon='home'>Home</a>
+		<input type="search" name="searchbar" placeholder='search for breed' data-mini="true" autocomplete='off' onkeyup='showAnimals(2, this.value)'>
+	</div>
+
+	<div data-role='content' id='list_area_cat'></div>
+
+	<div data-role="footer" data-position="fixed" data-id="footerid">
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="#footer_dogs" data-transition="slide" onclick='showAnimals(1)'><img src='./images/icon_dog.png' alt='dogs icon'><br />Dogs</a></li>
+				<li><a href="#footer_cats" data-transition="slide" onclick='showAnimals(2)'><img src='./images/icon_cat.png' alt='cats icon'><br />Cats</a></li>
+				<li><a href="#footer_other" data-transition="slide" onclick='showAnimals(3)'><img src='./images/icon_rabbit.png' alt='other icon'><br />Other</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- Other page -->
+<div data-role='page' id='footer_other'>
+
+	<div data-role='header'>
+		<a href='#home' data-icon='home'>Home</a>
+		<input type="search" name="searchbar" placeholder='search for breed' data-mini="true" autocomplete='off' onkeyup='showAnimals(3, this.value)'>
+	</div>
+
+	<div data-role='content' id='list_area_other'></div>
+
+	<div data-role="footer" data-position="fixed" data-id="footerid">
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="#footer_dogs" data-transition="slide" onclick='showAnimals(1)'><img src='./images/icon_dog.png' alt='dogs icon'><br />Dogs</a></li>
+				<li><a href="#footer_cats" data-transition="slide" onclick='showAnimals(2)'><img src='./images/icon_cat.png' alt='cats icon'><br />Cats</a></li>
+				<li><a href="#footer_other" data-transition="slide" onclick='showAnimals(3)'><img src='./images/icon_rabbit.png' alt='other icon'><br />Other</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- Animal Details page -->
+<div data-role='page' id='animal_details'>
+	
+	<div data-role='header' data-theme='a' style='height:40px !important;'>
+		<a href='#home' data-icon='home'>Home</a>
+		&nbsp;
+	</div>
+
+	<div data-role='content' id='animal_info_area'></div>
+
+	<div data-role="footer" data-position="fixed" data-id="footerid">
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="#footer_dogs" data-transition="slide" onclick='showAnimals(1)'><img src='./images/icon_dog.png' alt='dogs icon'><br />Dogs</a></li>
+				<li><a href="#footer_cats" data-transition="slide" onclick='showAnimals(2)'><img src='./images/icon_cat.png' alt='cats icon'><br />Cats</a></li>
+				<li><a href="#footer_other" data-transition="slide" onclick='showAnimals(3)'><img src='./images/icon_rabbit.png' alt='other icon'><br />Other</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
